@@ -8,7 +8,7 @@ var taskSchema = new Schema({
     },
     isCompleted: {
         type: Boolean,
-        required: true
+        // required: true
     }
 }, { timestamps: true })
 

@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var Mentor = require('../../models/Mentors');
+var Todo = require('../../models/Todos');
 var auth = require('./../auth');
 
 // 
@@ -36,5 +37,17 @@ router.post("/signup", async (req, res) => {
       res.json({ success: false, err });
     }
   });
+
+
+// 
+router.post('/task', async (req, res) => {
+    try {
+      var todo = await Todo.create(req.body.user);
+      res.json({ success: true, todo });
+    } catch (err) {
+      console.log(err);
+      res.json({ success: false, err });
+    }
+  },);
 
 module.exports = router;
