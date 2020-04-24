@@ -5,19 +5,19 @@ var bcrypt = require("bcryptjs");
 var studentSchema = new Schema({
     name: {
         type: String,
-        required: true
+        // required: true
     },
     email: {
         type: String,
-        required: true
+        // required: true
     },
     password: {
         type: String,
-        required: true
+        // required: true
     },
     batchnumber: {
         type: Number,
-        required: true
+        // required: true
     },
 }, { timestamps: true })
 
